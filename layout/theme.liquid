@@ -343,6 +343,18 @@
         recipientFormExpanded: `{{ 'recipient.form.expanded' | t }}`,
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
       };
+
+      function openModalProduct(productId) {
+        var modalId = 'modalProduct-' + productId;
+        var modal = document.getElementById(modalId);
+        modal.style.display = 'block';
+      }
+
+      function closeModalProduct(productId) {
+        var modalId = 'modalProduct-' + productId;
+        var modal = document.getElementById(modalId);
+        modal.style.display = 'none';
+      }
     </script>
 
     {%- if settings.predictive_search_enabled -%}
